@@ -27,32 +27,27 @@ public class 分割等和子集{
 	解释: 数组不能分割成两个元素和相等的子集.*/
 
 	public boolean canPartition(int[] nums) {
-        int sum = 0;
-        for (int n : nums){
-            sum += n;
-        }
-        if (sum % 2 != 0){
-            return false;
-        }
-        sum = sum>>>1;
-        Arrays.sort(nums);
-        for (int i = nums.length - 1; i >= 0 ;i--) {
-            if (sum == nums[i]) 
-            	return true;
-            return dfs(nums, sum, i, nums[i]);
-        }
-        return false;
+		  int sum=0;
+	        for(int i:nums){
+	            sum+=i;
+	        }
+	        if(sum%2!=0){
+	            return false;
+	        }
+	        sum=sum/2;
+	        Arrays.sort(nums);
+	        return backtracking(nums,sum,nums.length-1);
+
+	    }
+	    public boolean backtracking(int[] nums,int sum,int index){
+	        for(int i=index;i>0&&nums[i]<=sum;i--){
+	            if(nums[i]==sum)
+	                return true;
+	            if(backtracking(nums,sum-nums[i],i-1)||backtracking(nums,sum,i-1))
+	                return true;
+	        }
+	        return false;
+	    }
     }
 
-    private boolean dfs(int[] nums, int sum, int row, int cur){
-        for (int i = row - 1; i >= 0; i--){
-            if (cur + nums[i] == sum) return true;
-            if (cur + nums[i] > sum)  continue;
-            if (dfs(nums, sum, i, cur + nums[i])) 
-            	return true;
-        }
-        return false;
-    }
-
-}
 
