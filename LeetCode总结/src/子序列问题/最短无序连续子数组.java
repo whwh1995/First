@@ -30,7 +30,8 @@ public class 最短无序连续子数组 {
 	            }
 
 	        }
-	        if(i==j) return 0;
+	        if(i==j) 
+	        	return 0;
 	        int min = nums[i];
 	        int max = nums[i];
 	        for(int k=i+1; k<=j; k++){

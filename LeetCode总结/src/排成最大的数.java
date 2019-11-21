@@ -7,7 +7,7 @@ import java.util.Scanner;
 import jdk.nashorn.internal.ir.Flags;
 
 
-public class test {
+public class 排成最大的数 {
 		static String max="-1";
 	 public static void main(String[] args){
 		 Scanner sc=new Scanner(System.in);
