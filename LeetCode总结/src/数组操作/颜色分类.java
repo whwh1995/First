@@ -19,7 +19,7 @@ public class 颜色分类 {
 	        int zero=0;
 	        int cur=0;
 	        int two=nums.length-1;
-	        while(cur<=two){
+	        while(cur<=two){    //若无等于 {2，0，1} 不符合
 	            if(nums[cur]==0){
 	                swap(nums,zero++,cur++);
 	            }else if(nums[cur]==2)

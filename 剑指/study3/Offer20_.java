@@ -24,7 +24,8 @@ public class Offer20_ {
 	*   ： 重复 0 ~ n
 	.   ： 任意字符
 	\\. ： 转义后的 .
-	\\d ： 数字*/
+	\\d ： 数字
+	*/
 	public boolean isNumeric(char[] str) {
 	    if (str == null || str.length == 0)
 	        return false;

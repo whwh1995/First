@@ -13,8 +13,8 @@ public class Offer68 {
 			    return root;
 			}
 			
-//			普通二叉树
-//			在左右子树中查找是否存在 p 或者 q，如果 p 和 q 分别在两个子树中，那么就说明根节点就是最低公共祖先。
+//	普通二叉树
+//	在左右子树中查找是否存在 p 或者 q，如果 p 和 q 分别在两个子树中，那么就说明根节点就是最低公共祖先。
 
 			public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
 			    if (root == null || root == p || root == q)

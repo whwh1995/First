@@ -6,7 +6,7 @@ public class 在排序数组中查找元素的第一个和最后一个位置 {
 	    // inserted in sorted array `nums` via binary search.
 	    private int extremeInsertionIndex(int[] nums, int target, boolean left) {
 	        int lo = 0;
-	        int hi = nums.length;
+	        int hi = nums.length;  //*
 
 	        while (lo < hi) {
 	            int mid = (lo + hi) / 2;

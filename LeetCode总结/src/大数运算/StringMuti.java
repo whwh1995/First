@@ -1,7 +1,10 @@
 package 大数运算;
 
 public class StringMuti {
-	    public String multiply(String num1, String num2) {
+	public static void main(String[] args) {
+		System.out.println(multiply("123", "456"));
+	}
+	    public static String multiply(String num1, String num2) {
 	        /**
 	        num1的第i位(高位从0开始)和num2的第j位相乘的结果在乘积中的位置是[i+j, i+j+1]
 	        例: 123 * 45,  123的第1位 2 和45的第0位 4 乘积 08 存放在结果的第[1, 2]位中

@@ -18,7 +18,7 @@ public class Offer34_ {
 	    path.add(node.val);
 	    target -= node.val;
 	    if (target == 0 && node.left == null && node.right == null) {
-	        ret.add(new ArrayList<>(path)); // ????!!!!
+	        ret.add(new ArrayList<>(path)); // 
 	    } else {
 	        backtracking(node.left, target, path);
 	        backtracking(node.right, target, path);
